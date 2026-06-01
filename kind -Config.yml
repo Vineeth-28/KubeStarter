@@ -1,0 +1,9 @@
+# three nodes and two workers (cluster config)
+
+#Mutli - Node Clusters 
+kind: cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker 
