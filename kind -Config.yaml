@@ -1,16 +1,16 @@
 # three nodes and two workers (cluster config)
 
-#Mutli - Node Clusters 
+#Mutli - Node Clusters
 ---
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
   - role: control-plane
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
   - role: worker
-    image: kindest/node:latest
-  - role: worker 
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
+  - role: worker
+    image: kindest/node:v1.31.0
 
 
 #Control-plane HA example
@@ -20,17 +20,18 @@ kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
   - role: control-plane
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
   - role: control-plane
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
   - role: control-plane
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
   - role: worker
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
   - role: worker
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
   - role: worker
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
+
 
 # Mapping ports to the host machine
 ---
@@ -38,7 +39,7 @@ kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
   - role: control-plane
-    image: kindest/node:latest
+    image: kindest/node:v1.31.0
     extraPortMappings:
       - containerPort: 80
         hostPort: 80
